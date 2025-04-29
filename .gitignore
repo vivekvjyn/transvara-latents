@@ -1,0 +1,5 @@
+.ipynb_checkpoints
+.ropeprojects
+__pycache__
+dataset
+checkpoints
