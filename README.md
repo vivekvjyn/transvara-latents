@@ -1,5 +1,13 @@
 # Representation Learning for Carnatic Music Transcription
 
+## TODO
+
+- [x] Tokenization
+- [ ] Representation Learning (Transformer)
+- [ ] Unsupervised Learning (DTW, Tokenization)
+- [ ] Supervised Data Augmentation
+- [ ] Context incorporation
+
 ## Setup
 
 **Clone the repository**
