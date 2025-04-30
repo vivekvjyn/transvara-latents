@@ -185,7 +185,7 @@ class vqvae(BaseModel):
             optimizer.zero_grad()
             z = self.encoder(batch)
             vq_loss, quantized, perplexity, embedding_weight, encoding_indices, encodings = self.vq(z)
-            data_recon = self.decoder(quantized, self.compression_factor)
+            data_recon = self.decoder(quantized)
             recon_error = F.mse_loss(data_recon, batch)
             loss = recon_error + vq_loss
             loss.backward()
@@ -193,9 +193,9 @@ class vqvae(BaseModel):
 
         if mode == 'test':
             with torch.no_grad():
-                z = self.encoder(batch, self.compression_factor)
+                z = self.encoder(batch)
                 vq_loss, quantized, perplexity, embedding_weight, encoding_indices, encodings = self.vq(z)
-                data_recon = self.decoder(quantized, self.compression_factor)
+                data_recon = self.decoder(quantized)
                 recon_error = F.mse_loss(data_recon, batch)
                 loss = recon_error + vq_loss
 
