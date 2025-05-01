@@ -2,11 +2,11 @@
 
 ## TODO
 
-- [x] Tokenization
+- [x] Time Series Tokenization (VQVAE)
 - [ ] Representation Learning (Transformer)
 - [ ] Unsupervised Learning (DTW, Tokenization)
 - [ ] Supervised Data Augmentation
-- [ ] Context incorporation
+- [ ] Context incorporation ()
 
 ## Setup
 
